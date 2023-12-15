@@ -1,0 +1,126 @@
+html{
+    /* scroll-snap-type: y mandatory; */
+}
+
+body {
+    font-family: Poppins, Arial, sans-serif;
+    color: #2E282A;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    font-family: Poppins, Arial, sans-serif;
+    color: #2E282A;
+    margin: 0;
+    text-align: center;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.button{
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.25rem;
+    background: transparent;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
+    &:active{
+        transform: scale(0.9);
+    }
+}
+& .primary{
+    border-radius: 1rem;
+    background: #6DCACA;
+    border: 2px solid black;
+}
+& .secondary{
+    border-radius: 1rem;
+    border: 2px solid #6DCACA;
+}
+
+li {
+    list-style: none;
+}
+
+ul{
+    margin: 0;
+    gap: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #2E282A;
+}
+p {
+    font-size: 1.5rem;
+    opacity: 0.4; 
+}
+
+header{
+    padding: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    z-index: 1;
+    height: 5rem;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    &::before{
+        content: '';
+        width: 90%;
+        height: 2px;
+        background: #2E282A;
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+    }
+}
+
+footer {
+    padding: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    ::before{
+        content: '';
+        background: #2E282A;
+        width: 90%;
+        height: 2px;
+        position: absolute;
+        top: 0;
+        left: 5%;
+    }
+    ul{
+        display: flex;
+        gap: 1rem;
+       
+    }
+    scroll-snap-align: end;
+}
+
+section {
+    width: 100%;
+    min-height: calc( 100dvh - 9rem );
+    scroll-snap-align: end;
+}
